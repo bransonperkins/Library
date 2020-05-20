@@ -2,6 +2,8 @@ package library.main;
 
 import library.books.Fiction;
 import library.libraryitems.Book;
+import library.libraryitems.SubscriptionPeriods;
+import library.periodicals.Newspaper;
 
 public class Library {
 
@@ -16,5 +18,9 @@ public class Library {
                 "J. K. Rowling", "Scholastic Press", "Fantasy/Adventure",
                 true, false);
         System.out.println(harryPotter2.isBookIllustrated());
+
+        Newspaper newsAndObserver = new Newspaper("Harry Potter", 1, 5, 1.99,
+                true, SubscriptionPeriods.DAILY, true, 15);
+        newsAndObserver.isItBlackAndWhite();
     }
 }
