@@ -32,7 +32,7 @@ public class Audio extends Media {
         this.music = music;
     }
 
-    public String isItMusic() {
-        return music ? "This is music!" : "This is an audio book!";
+    public void isItMusic() {
+        System.out.println(music ? "This is music!" : "This is an audio book!");
     }
 }

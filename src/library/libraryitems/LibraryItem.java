@@ -57,9 +57,9 @@ public class LibraryItem {
         this.stocked = stocked;
     }
 
-    public String isItemInStock() {
-        return stocked ? "Yes! We have " + this.getName() + " in stock!" : "No! We don't have " + this.getName() +
-                " in stock!";
+    public void isItemInStock() {
+        System.out.println(stocked ? "Yes! We have " + this.getName() + " in stock!" : "No! We don't have " + this.getName() +
+                " in stock!");
     }
 
     @Override

@@ -32,7 +32,7 @@ public class Video extends Media {
         this.colored = colored;
     }
 
-    public String isVideoInColor() {
-        return colored ? "The video is in color." : "The video is not in color.";
+    public void isVideoInColor() {
+        System.out.println(colored ? "The video is in color." : "The video is not in color.");
     }
 }

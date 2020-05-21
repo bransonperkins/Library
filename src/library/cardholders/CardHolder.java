@@ -4,12 +4,15 @@ public class CardHolder {
 
     private String cardholderName;
     private String cardIssueDate;
-    private String itemsRented;
 
-    public CardHolder(String cardholderName, String cardIssueDate, String itemsRented) {
-        this.cardholderName = cardholderName;
-        this.cardIssueDate = cardIssueDate;
-        this.itemsRented = itemsRented;
+    public String cardHolderAge;
+
+    private String itemsRented;
+    public CardHolder(String cardholderName, String cardIssueDate, String cardHolderAge, String itemsRented) {
+        setCardholderName(cardholderName);
+        setCardIssueDate(cardIssueDate);
+        setCardHolderAge(cardHolderAge);
+        setItemsRented(itemsRented);
     }
 
     public String getCardholderName() {
@@ -26,6 +29,14 @@ public class CardHolder {
 
     public void setCardIssueDate(String cardIssueDate) {
         this.cardIssueDate = cardIssueDate;
+    }
+
+    public String getCardHolderAge() {
+        return cardHolderAge;
+    }
+
+    public void setCardHolderAge(String cardHolderAge) {
+        this.cardHolderAge = cardHolderAge;
     }
 
     public String getItemsRented() {

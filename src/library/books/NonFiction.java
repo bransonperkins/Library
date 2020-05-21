@@ -1,18 +1,17 @@
 package library.books;
 
+import library.enums.BookTypes;
 import library.libraryitems.Book;
 
 public class NonFiction extends Book {
 
     private String subject;
-    private String referenceOrTextbook;
 
     public NonFiction(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
                       int publicationYear, int numOfPages, String hardOrSoftCover, String author, String publisher,
-                      String subject, String referenceOrTextbook) {
+                      BookTypes bookTypes, String subject) {
         super(name, id, checkoutDurationInDays, checkoutFee, stocked, publicationYear, numOfPages,
-                hardOrSoftCover, author, publisher);
-        setReferenceOrTextbook(referenceOrTextbook);
+                hardOrSoftCover, author, publisher, bookTypes);
         setSubject(subject);
     }
 
@@ -24,11 +23,4 @@ public class NonFiction extends Book {
         this.subject = subject;
     }
 
-    public String getReferenceOrTextbook() {
-        return referenceOrTextbook;
-    }
-
-    public void setReferenceOrTextbook(String referenceOrTextbook) {
-        this.referenceOrTextbook = referenceOrTextbook;
-    }
 }

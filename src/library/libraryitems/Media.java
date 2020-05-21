@@ -58,14 +58,14 @@ public class Media extends LibraryItem {
         this.duration = duration;
     }
 
-    public String needComputer() {
-        return needComputerToUse ? "A computer is needed to use this product." :
-                "A computer is not needed to use this product";
+    public void needComputer() {
+        System.out.println(needComputerToUse ? "A computer is needed to use this product." :
+                "A computer is not needed to use this product");
     }
 
-    public String thirteenYearsOrOlder() {
-        return matureAudiencesOnly ? "Children under the age of 13 cannot check this item out without parent approval." :
-                "This item can be checked out by this customer.";
+    public void thirteenYearsOrOlder() {
+        System.out.println(matureAudiencesOnly ? "Children under the age of 13 cannot check this item out without " +
+                "parent approval." : "This item can be checked out by this customer.");
     }
 
 }

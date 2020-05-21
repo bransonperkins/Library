@@ -1,7 +1,7 @@
 package library.periodicals;
 
 import library.libraryitems.Periodical;
-import library.libraryitems.SubscriptionPeriods;
+import library.enums.SubscriptionPeriods;
 
 public class Newspaper extends Periodical {
 
@@ -35,4 +35,5 @@ public class Newspaper extends Periodical {
         System.out.println(blackAndWhite ? "This newspaper is printed in black and white." :
                 "This newspaper is printed in color.");
     }
+
 }
