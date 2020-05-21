@@ -4,10 +4,9 @@ public class CardHolder {
 
     private String cardholderName;
     private String cardIssueDate;
-
     public String cardHolderAge;
-
     private String itemsRented;
+
     public CardHolder(String cardholderName, String cardIssueDate, String cardHolderAge, String itemsRented) {
         setCardholderName(cardholderName);
         setCardIssueDate(cardIssueDate);
