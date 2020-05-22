@@ -1,6 +1,13 @@
 package library.persons;
 
+import library.libraryitems.*;
+
 public class CardHolder {
+
+    // Create fields with OverdueLists
+    private OverdueList<Book> overdueBooks;
+    private OverdueList<Periodical> overduePeriodicals;
+    private OverdueList<Media> overdueMedia;
 
     private String cardholderName;
     private String cardIssueDate;

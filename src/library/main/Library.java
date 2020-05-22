@@ -7,6 +7,8 @@ import library.libraryitems.Book;
 import library.enums.SubscriptionPeriods;
 import library.periodicals.Newspaper;
 
+import java.util.ArrayList;
+
 public class Library {
 
     public static void main(String[] args) {
@@ -38,6 +40,5 @@ public class Library {
         freakonomics.isReservable();
         freakonomics.isLoanable();
 
-        // Create an arraylist 
     }
 }

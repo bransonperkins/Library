@@ -73,7 +73,7 @@ public class Book extends LibraryItem {
 
     @Override
     public String toString() {
-        return "You are checking out " + this.getName() + " by Author name will go here for a period of " +
+        return "You are checking out " + this.getName() + " by " + this.getAuthor() + " for a period of " +
                 this.getCheckoutDurationInDays() + " days. " + "The late fee is $" + this.getCheckoutFee() +
                 " if you don't return it within those " + this.getCheckoutDurationInDays() + " days.";
     }

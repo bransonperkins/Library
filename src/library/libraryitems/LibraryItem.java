@@ -1,5 +1,6 @@
 package library.libraryitems;
 
+import library.enums.LateFee;
 import library.interfaces.Loanable;
 import library.interfaces.Reservable;
 
@@ -91,5 +92,16 @@ public class LibraryItem implements Reservable, Loanable {
         if (!educationalContent) System.out.println(this.getName() + " is available for loan!");
         else System.out.println(this.getName() +
                 " is not available for loan.");
+    }
+
+    @Override
+    public void lateFee(LateFee feeCost) {
+        switch (feeCost) {
+            case DAILY -> System.out.println("$1");
+            case WEEKLY -> System.out.println("$3");
+            case BIMONTHLY -> System.out.println("$5");
+            case MONTHLY -> System.out.println("$10");
+            default -> System.out.println("No late fees.");
+        }
     }
 }
