@@ -14,6 +14,6 @@ public class OverdueList<T extends LibraryItem> {
     }
 
     public void removeOverdueItem(T item) {
-        overdueItems.add(item);
+        overdueItems.remove(item);
     }
 }
