@@ -7,11 +7,11 @@ public class Audio extends Media {
     private String artistOrNarrator;
     private boolean music;
 
-    public Audio(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked, String producer,
-                 boolean matureAudiencesOnly, boolean needComputerToUse, String genre, String artistOrNarrator,
+    public Audio(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
+                 String producer, boolean matureAudiencesOnly, boolean needComputerToUse, String genre, String artistOrNarrator,
                  boolean music, float duration) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, producer, matureAudiencesOnly, needComputerToUse,
-                genre, duration);
+        super(name, checkoutDurationInDays, stocked, educationalContent, producer, matureAudiencesOnly,
+                needComputerToUse, genre, duration);
         setArtistOrNarrator(artistOrNarrator);
         setMusic(music);
     }

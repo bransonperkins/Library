@@ -7,9 +7,9 @@ public class Magazine extends Periodical {
 
     private String category;
 
-    public Magazine(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
+    public Magazine(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
                     SubscriptionPeriods subscriptionClass, String category) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, subscriptionClass);
+        super(name, checkoutDurationInDays, stocked, educationalContent, subscriptionClass);
         setCategory(category);
     }
 

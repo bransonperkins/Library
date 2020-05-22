@@ -1,20 +1,27 @@
 package library.libraryitems;
 
-public class LibraryItem {
+import library.interfaces.Loanable;
+import library.interfaces.Reservable;
 
-    // add release date for each item??
+public class LibraryItem implements Reservable, Loanable {
+
+    // Library Item fields
+    // create counter to generate new ID each time new LibraryItem is created
+    private static int counter = 113355790;
+    public final int id;
     private String name;
-    private int id;
     private int checkoutDurationInDays;
-    private double checkoutFee;
+    private double checkoutFee = 1.99;
     private boolean stocked;
+    private boolean educationalContent;
 
-    public LibraryItem(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked) {
+    public LibraryItem(String name, int checkoutDurationInDays, boolean stocked,
+                       boolean educationalContent) {
+        this.id = counter++;
         setName(name);
-        setId(id);
         setCheckoutDurationInDays(checkoutDurationInDays);
-        setCheckoutFee(checkoutFee);
         setStocked(stocked);
+        setEducationalContent(educationalContent);
     }
 
     public String getName() {
@@ -29,15 +36,11 @@ public class LibraryItem {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getCheckoutDurationInDays() {
         return checkoutDurationInDays;
     }
 
-    public void setCheckoutDurationInDays(int checkoutDurationInDays) {
+    public void setCheckoutDurationInDays(Integer checkoutDurationInDays) {
         this.checkoutDurationInDays = checkoutDurationInDays;
     }
 
@@ -45,7 +48,7 @@ public class LibraryItem {
         return checkoutFee;
     }
 
-    public void setCheckoutFee(double checkoutFee) {
+    public void setCheckoutFee(Double checkoutFee) {
         this.checkoutFee = checkoutFee;
     }
 
@@ -57,9 +60,17 @@ public class LibraryItem {
         this.stocked = stocked;
     }
 
+    public boolean isEducationalContent() {
+        return educationalContent;
+    }
+
+    public void setEducationalContent(boolean educationalContent) {
+        this.educationalContent = educationalContent;
+    }
+
     public void isItemInStock() {
-        System.out.println(stocked ? "Yes! We have " + this.getName() + " in stock!" : "No! We don't have " + this.getName() +
-                " in stock!");
+        System.out.println(stocked ? "Yes! We have " + this.getName() + " in stock!" : "No! We don't have " +
+                this.getName() + " in stock!");
     }
 
     @Override
@@ -69,4 +80,16 @@ public class LibraryItem {
                 this.getCheckoutDurationInDays() + " days.";
     }
 
+    @Override
+    public void isReservable() {
+        System.out.println(educationalContent ? this.getName() + " can be reserved. However, these items can only be used on the " +
+                "premises due to high demand." : this.getName() + " cannot be reserved. First come, first served!");
+    }
+
+    @Override
+    public void isLoanable() {
+        if (!educationalContent) System.out.println(this.getName() + " is available for loan!");
+        else System.out.println(this.getName() +
+                " is not available for loan.");
+    }
 }

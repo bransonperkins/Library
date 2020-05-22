@@ -1,4 +1,4 @@
-package library.cardholders;
+package library.persons;
 
 public class CardHolder {
 

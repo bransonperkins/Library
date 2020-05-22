@@ -7,11 +7,11 @@ public class NonFiction extends Book {
 
     private String subject;
 
-    public NonFiction(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
-                      int publicationYear, int numOfPages, String hardOrSoftCover, String author, String publisher,
-                      BookTypes bookTypes, String subject) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, publicationYear, numOfPages,
-                hardOrSoftCover, author, publisher, bookTypes);
+    public NonFiction(String name, int checkoutDurationInDays,  boolean stocked, boolean educationalContent,
+                      int publicationYear, int numOfPages, String hardOrSoftCover, String publisher,
+                      BookTypes bookTypes, String firstName, String lastName, String subject) {
+        super(name, checkoutDurationInDays,  stocked, educationalContent, publicationYear, numOfPages,
+                hardOrSoftCover, publisher, bookTypes, firstName, lastName);
         setSubject(subject);
     }
 

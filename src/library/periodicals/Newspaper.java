@@ -8,9 +8,9 @@ public class Newspaper extends Periodical {
     private boolean blackAndWhite;
     private int numOfColumns;
 
-    public Newspaper(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
+    public Newspaper(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
                       SubscriptionPeriods subscriptionClass, boolean blackAndWhite, int numOfColumns) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, subscriptionClass);
+        super(name, checkoutDurationInDays, stocked, educationalContent, subscriptionClass);
         setBlackAndWhite(blackAndWhite);
         setNumOfColumns(numOfColumns);
     }

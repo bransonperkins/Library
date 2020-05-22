@@ -6,9 +6,9 @@ public class Periodical extends LibraryItem {
 
     private SubscriptionPeriods subscriptionClass;
 
-    public Periodical(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
-                      SubscriptionPeriods subscriptionClass) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked);
+    public Periodical(String name, int checkoutDurationInDays, boolean stocked,
+                      boolean educationalContent, SubscriptionPeriods subscriptionClass) {
+        super(name, checkoutDurationInDays, stocked, educationalContent);
         setSubscriptionClass(subscriptionClass);
     }
 

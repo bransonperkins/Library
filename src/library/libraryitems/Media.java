@@ -8,9 +8,9 @@ public class Media extends LibraryItem {
     private String genre;
     private float duration;
 
-    public Media(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked, String producer,
-                 boolean matureAudiencesOnly, boolean needComputerToUse, String genre, float duration) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked);
+    public Media(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
+                 String producer, boolean matureAudiencesOnly, boolean needComputerToUse, String genre, float duration) {
+        super(name, checkoutDurationInDays, stocked, educationalContent);
         setMatureAudiencesOnly(matureAudiencesOnly);
         setProducer(producer);
         setNeedComputerToUse(needComputerToUse);

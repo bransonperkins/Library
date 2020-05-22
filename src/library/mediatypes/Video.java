@@ -7,11 +7,11 @@ public class Video extends Media {
     private String dvdOrBluRay;
     private boolean colored;
 
-    public Video(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked, String producer,
-                 boolean matureAudiencesOnly, boolean needComputerToUse, String genre, float duration,
+    public Video(String name, int checkoutDurationInDays, boolean stocked, String producer,
+                 boolean educationalContent, boolean matureAudiencesOnly, boolean needComputerToUse, String genre, float duration,
                  String dvdOrBluRay, boolean colored) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, producer, matureAudiencesOnly, needComputerToUse,
-                genre, duration);
+        super(name, checkoutDurationInDays, stocked, educationalContent, producer, matureAudiencesOnly,
+                needComputerToUse, genre, duration);
         setDvdOrBluRay(dvdOrBluRay);
         setColored(colored);
     }

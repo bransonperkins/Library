@@ -7,11 +7,11 @@ public class Fiction extends Book {
 
     private String genre;
 
-    public Fiction(String name, int id, int checkoutDurationInDays, double checkoutFee, boolean stocked,
-                   int publicationYear, int numOfPages, String hardOrSoftCover, String author, String publisher,
-                   BookTypes bookTypes, String genre) {
-        super(name, id, checkoutDurationInDays, checkoutFee, stocked, publicationYear, numOfPages,
-                hardOrSoftCover, author, publisher, bookTypes);
+    public Fiction(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
+                   int publicationYear, int numOfPages, String hardOrSoftCover, String publisher,
+                   BookTypes bookTypes, String firstName, String lastName, String genre) {
+        super(name, checkoutDurationInDays, stocked, educationalContent, publicationYear, numOfPages,
+                hardOrSoftCover, publisher, bookTypes, firstName, lastName);
         setGenre(genre);
     }
 
