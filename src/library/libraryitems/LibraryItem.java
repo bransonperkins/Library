@@ -89,8 +89,7 @@ public abstract class LibraryItem implements Reservable, Loanable {
 
     @Override
     public void isLoanable() {
-        if (!educationalContent) System.out.println(this.getName() + " is available for loan!");
-        else System.out.println(this.getName() +
+        System.out.println(!educationalContent ? this.getName() + " is available for loan!" : this.getName() +
                 " is not available for loan.");
     }
 
