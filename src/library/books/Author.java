@@ -28,6 +28,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "The author's name is: " + this.getFirstName() + " " + this.getLastName();
+        return this.getFirstName() + " " + this.getLastName();
     }
 }

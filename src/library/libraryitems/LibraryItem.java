@@ -4,7 +4,7 @@ import library.enums.LateFee;
 import library.interfaces.Loanable;
 import library.interfaces.Reservable;
 
-public class LibraryItem implements Reservable, Loanable {
+public abstract class LibraryItem implements Reservable, Loanable {
 
     // Library Item fields
     // create counter to generate new ID each time new LibraryItem is created

@@ -9,9 +9,9 @@ public class Fiction extends Book {
 
     public Fiction(String name, int checkoutDurationInDays, boolean stocked, boolean educationalContent,
                    int publicationYear, int numOfPages, String hardOrSoftCover, BookTypes bookTypes,
-                   String firstName, String lastName, String publisher, String genre) {
+                   PublishingCompany publisher, Author author, String genre) {
         super(name, checkoutDurationInDays, stocked, educationalContent, publicationYear, numOfPages,
-                hardOrSoftCover, bookTypes, firstName, lastName, publisher);
+                hardOrSoftCover, bookTypes, publisher, author);
         setGenre(genre);
     }
 
